@@ -1,0 +1,743 @@
+:after, :before {
+    box-sizing: border-box;
+}
+
+/* Font Inter */
+:root { 
+    font-family: 'Inter', sans-serif; 
+}
+
+@supports (font-variation-settings : normal) {
+    :root { 
+        font-family: 'Inter var', sans-serif; 
+    }
+}
+
+/* scroll-behavior: smooth; permet d'avoir un défilement smooth vers un point B */
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 1.4rem;
+    color: #F7F7F7;
+    background-color:#101010;
+}
+
+/* retire la scrollbar mais garde la fonction scroll */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* Navbar */
+.navbar{
+    font-family: 'Inter' sans-serif;
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 5vh;
+    z-index: 10;
+}
+
+.navbar p{
+    color: rgba(247, 247, 247, 0.45);
+    margin-left: 70px;
+}
+
+.navbar ul {
+    display: flex;
+    margin-right: 70px;
+}
+
+.navbar a{
+    text-decoration: none;
+    color: #F7F7F7;
+    font-size: 17px;
+    margin-left: 35px;
+}
+
+
+/* Page 1 (Presentation) */
+.presentation{
+    width: 100vw;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+    background-image: url("../img/fondPresentation.png");
+    overflow: hidden;
+}
+
+.presentation .bienvenue{
+    margin-left: 9%;
+    width: 55%;
+    padding-top: 30vh;
+    padding-bottom: 20vh;
+}
+
+.presentation h1{
+    font-family: 'Inter' sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3.5vw;
+    line-height: 140%;
+}
+
+.presentation h2{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 0.75vw;
+    line-height: 16px;
+    letter-spacing: 0.35em;
+    margin-left: 0.2%;
+    margin-top: 30px;
+}
+
+.presentation span{
+    color: #D98888;
+}
+
+.presentation .hover img{
+    position: absolute;
+    opacity: 80%;
+    width: 200px;
+    display: none;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.presentation .basDePage{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 15vw;
+    margin-right: 15vw;
+    margin-bottom: 1vh;
+}
+
+.presentation p{
+    color: rgba(247, 247, 247, 0.45);
+}
+
+.presentation .fleche{
+    width: 35px;
+    margin-top: 2vh;
+}
+
+/* FIn de la Page 1*/
+
+/* Page 2 (Skills) */
+.skills{
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Inter';
+    font-style: normal;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.zoneTexte{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.partieTexte{ 
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 20%;
+    margin-right: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skills .titre{
+    max-width: 200px;
+}
+
+
+.skills h2{
+    font-weight: 300;
+    font-size: 0.7vw;
+    line-height: 16px;
+    letter-spacing: 0.35em;
+    margin-left: 5px;
+}
+
+.espacement{
+    margin: 1.5vh 0px;
+    margin-bottom: 2vh;
+    height: 1px;
+    background-color: #616161;
+}
+
+.skills p{
+    font-weight: 400;
+    font-size: 1.2vw;
+    line-height: auto;
+    text-align: justify;
+}
+
+.defilement{
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.espacementVerticalDebut{
+    width: 1px;
+    height: 80%;
+    background-color: #F7F7F7;
+    margin-right: 3em;
+}
+
+.espacementVerticalFin{
+    width: 1px;
+    height: 80%;
+    background-color: #F7F7F7;
+    margin-left: 3em;
+}
+
+.container {
+    display: flex;
+    width: 10%;
+    transform: rotate(-90deg);
+    margin-right: 1em;
+}
+
+.txt{
+    white-space: nowrap;
+    font-size: 6em;
+    font-weight: 300;
+    animation: scrollTxt 50s linear infinite;
+}
+
+@keyframes scrollTxt {
+    0%{
+      transform: translate(-120%, 0);
+    }
+    100% {
+      transform: translate(-20%, 0);
+    }
+}
+
+.container2 {
+    display: flex;
+    width: 10%;
+    transform: rotate(90deg);
+    margin-left: 1em;
+}
+
+.txt2 {
+    white-space: nowrap;
+    font-size: 6em;
+    font-weight: 300;
+    animation: scrollTxt2 50s linear infinite;
+  }
+
+
+@keyframes scrollTxt2 {
+    0%{
+      transform: translate(-118%, 0);
+    }
+    100% {
+      transform: translate(-18%, 0);
+    }
+}
+
+.skills .couleurD{
+    color:#D98888;
+}
+/* Fin de la Page 2 (skills) */
+
+
+/* Début de la page 3*/
+.projets{
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Inter' sans-serif;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.espacementProjet{
+    height: 1px;
+    background-color: #616161;
+    margin-top: 2.5vh;
+    margin-bottom: 2.5vh;
+    margin-left: 11vw;
+    margin-right: 11vw;
+
+}
+
+.projets h2{
+    margin-bottom: 4vh;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 350;
+    font-size: 1em;
+    line-height: 16px;
+    letter-spacing: 0.35em;
+    text-align: center;
+}
+
+.projets .hover{
+    transition: transform 0.3s;
+    margin-left: 13%;
+}
+
+.projets .hover:hover{
+    transform: translateX(1.5%) translateZ(0px);
+}
+
+.projets a{
+    font-size: 4vw;
+    letter-spacing: 3px;
+    text-decoration: none;
+    color: #F7F7F7;
+}
+
+.hover img{
+    position: absolute;
+    opacity: 100%;
+    width: 400px;
+    display: none;
+    pointer-events: none;
+    z-index: 10;
+}
+/* Fin de la Page 3 */
+
+
+/* Début de la Page 4 */
+.contact{
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Inter' sans-serif;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.contact .deplacement{
+    margin-left: 8%;
+}
+
+.contact .soulignement{
+    max-width: 180px;
+    margin-bottom: 8vh;
+}
+
+.contact h2{
+    margin-left: 6px;
+    font-weight: 350;
+    font-size: 0.9em;
+    letter-spacing: 0.35em;
+}
+
+.contact h3{
+    margin-left: 0.3%;
+    font-size: 0.8vw;
+    letter-spacing: 0.35em;
+    opacity: 0.8;
+}
+
+.contact p{
+    font-size: 4vw;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+.contact .email{
+    color: #D98888;
+}
+
+.reseau{
+    display: flex;
+    margin-top: 5vh;
+}
+
+.contact a{
+    font-size: 2vw;
+    text-decoration: none;
+    color: #F7F7F7;
+    margin-right: 5vw;
+}
+/* Fin de la Page 4*/
+
+
+
+
+
+/* Commun des pages Detail */
+.swipe{
+    padding-top: 43vh;
+}
+
+.swipe h1{
+    font-weight: 500;
+    font-size: 4vw;
+    letter-spacing: 0.14em;
+}
+
+.swipe h2{
+    margin-top: 4vh;
+    font-weight: 300;
+    font-size: 0.8vw;
+    letter-spacing: 0.34em;
+}
+
+.texteExplorer{
+    margin-top: 33vh;
+    margin-bottom: 1vh;
+    color: rgba(247, 247, 247, 0.45);
+
+}
+
+
+.explication{
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Inter' sans-serif;
+    display: flex;
+    align-items: center;
+}
+
+.explication .texteExplication{
+    margin-left: 8%;
+    margin-right: 8%;
+}
+
+.explication h2{
+    font-size: 1.7vw;
+    color: #D98888;
+}
+
+.explication h3{
+    font-size: 1.5vw;
+    margin-top: 10vh;
+}
+
+.explication p{
+    text-align: justify;
+    font-weight: 400;
+    font-size: 1.1vw;
+    line-height: auto;
+    color: rgba(247, 247, 247, 0.45);
+    margin-top: 2vh;
+}
+
+.images{
+    text-align: center;
+}
+
+.images figure img{
+    margin-bottom: 15vh;
+    width: 80%;
+}
+
+.images .boutonGithub{
+    padding: 1em;
+    text-align: center;
+    letter-spacing: 0.35em;
+    font-size: 1.2em;
+    text-decoration: none;
+    color: #F7F7F7;
+    border: 1px solid;
+    border-radius: 50px;
+}
+/* Fin Commun des pages Detail */
+
+
+/* Debut page Museum (detail) */
+.museum{
+    width: 100vw;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+    font-family: 'Inter' sans-serif;
+    background-image: url("../img/museum.png");
+    text-align: center;
+}
+
+/* Debut page Leafarium (detail) */
+.leafarium{
+    width: 100vw;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+    font-family: 'Inter' sans-serif;
+    background-image: url("../img/leafarium.png");
+    text-align: center;
+}
+
+
+/* Debut page Moontain (detail) */
+.moontain{
+    width: 100vw;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+    font-family: 'Inter' sans-serif;
+    background-image: url("../img/moontain.png");
+    text-align: center;
+}
+
+
+/* Debut page Portfolio (detail) */
+.portfolio{
+    width: 100vw;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+    font-family: 'Inter' sans-serif;
+    background-image: url("../img/portfolio.png");
+    text-align: center;
+}
+
+
+/* Format Telephone */
+@media screen and (max-width: 900px){
+
+    /* Navbar */ 
+    .navbar p{
+        margin-left: 5%;
+        font-size: 0.8em;
+    }
+    
+    .navbar ul {
+        display: flex;
+        margin-right: 9%;
+    }
+    .navbar li{
+        margin-right: 15%;
+    }
+    
+    .navbar a{
+        font-size: 0.8em;
+        margin-left: 0%;
+    }
+    /* Fin de la navbar */
+
+    /* Page 1 */
+    .presentation .bienvenue{
+        padding-top: 26vh;
+        width: 80%;
+    }
+
+    .presentation h1 {
+        width: 80vw;
+        font-size: 2.5em;
+    }
+
+    .presentation h2{
+        font-size: 0.7em;
+        letter-spacing: 0.25em;
+    }
+    .presentation img{
+        width: 50px;
+    }
+    /* Fin de la Page 1 */
+
+
+    /* Debut page 2 */
+    .skills{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .zoneTexte{
+        width: 100%;
+        height: 100%;
+        padding-top: 7vh;
+    }
+    .partieTexte{ 
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    
+    .skills .titre{
+        max-width: 50vw;
+    }
+    
+    
+    .skills h2{
+        font-size: 0.7em;
+        line-height: 16px;
+    }
+    
+    .skills p{
+        font-size: 3vw;
+        line-height: auto;
+        text-align: justify;
+    }
+
+
+    .defilement{
+        height: 100%;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .espacementVerticalDebut{
+        width: 80%;
+        height: 1px;
+        background-color: #F7F7F7;
+        margin-bottom: 6vh;
+        margin-left: 5.4vh;
+    }
+    
+    .espacementVerticalFin{
+        width: 80%;
+        height: 1px;
+        background-color: #F7F7F7;
+        margin-right: 5.4vh;
+    }
+
+    .container {
+        width: 100%;
+        transform: translateY(-50%);
+    }
+    
+    .txt{
+        font-size: 3em;
+        
+    }
+    
+    @keyframes scrollTxt {
+        0%{
+          transform: translate(-100%, 0);
+        }
+        100% {
+          transform: translate(0%, 0);
+        }
+    }
+
+    .container2 {
+        width: 100%;
+        transform: translateY(-50%);
+    }
+    
+    .txt2 {
+        font-size: 3em;
+      }
+    
+    @keyframes scrollTxt2 {
+        0%{
+          transform: translate(-15%, 0);
+        }
+        100% {
+          transform: translate(-118%, 0);
+        }
+    }
+    /* Fin de la Page 2 */
+
+
+    /* Debut page 3 */
+    .projets h2{
+        letter-spacing: 0.25em;
+    }
+
+    .espacementProjet{
+        margin-top: 3vh;
+        margin-bottom: 3vh;
+    }
+
+    .projets a{
+        font-size: 2.3em;
+        letter-spacing: 3px;
+    }
+    
+    .projets .lettre{
+        font-size: 0.3em;
+    }
+    
+    .hover img{
+        width: 200px;
+    }
+    /* Fin de la Page 3 */
+
+
+    /* Debut page 4 */
+    .contact h3{
+        font-size: 0.7em;
+        letter-spacing: 0.25em;
+        opacity: 0.8;
+    
+    }
+    
+    .contact p{
+        font-size: 2.5em;
+        margin-top: 8vh;
+        margin-bottom: 8vh;
+    }
+    
+    .reseau{
+        display: flex;
+        flex-direction: column;
+        margin-top: 5vh;
+    }
+    
+    .contact a{
+        font-size: 1em;
+        text-decoration: none;
+        color: #F7F7F7;
+    }
+    
+    .contact li{
+        margin-bottom: 2vh;
+    }
+    /* Fin de la Page 4 */
+
+
+    /* Debut page Detail Commun */
+    .swipe{
+        padding-top: 43vh;
+    }
+    
+    .swipe h1{
+        font-weight: 600;
+        font-size: 3em;
+    }
+    
+    .swipe h2{
+        margin-top: 4vh;
+        font-weight: 300;
+        font-size: 0.8em;
+    }
+    
+    .texteExplorer{
+        margin-top: 35vh;
+        color: rgba(247, 247, 247, 0.45);
+    
+    }
+    
+    .explication h2{
+        font-size: 1.7em;
+    }
+    
+    .explication h3{
+        margin-top: 5vh;
+        font-size: 1em;
+    }
+    
+    .explication p{
+        font-size: 0.8em;
+        color: rgba(247, 247, 247, 0.45);
+    }
+    /* Fin page Commun */
+}
