@@ -320,6 +320,10 @@ body::-webkit-scrollbar {
     pointer-events: none;
     z-index: 10;
 }
+
+#projetEncours{
+    color: #D98888;
+}
 /* Fin de la Page 3 */
 
 
