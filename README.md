@@ -4,7 +4,7 @@
 Bienvenue sur la création de mon Portfolio. Celui-ci me permet de mettre à disposition un visuel de chacun de mes projets.
 Pour le thème, j'ai choisi le typographique.
 
-Langages:
+#### Langages:
 
   - HTML
   - CSS
