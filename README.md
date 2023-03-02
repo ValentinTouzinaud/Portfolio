@@ -13,4 +13,4 @@ Pour le thème, j'ai choisi le typographique.
 
 ### Maquette Figma :
 
-https://www.figma.com/file/XhgmV7hMTJ01FuTeERgm5c/Portfolio?t=UvutKk0WIsOQ6wMC-7
+https://www.figma.com/file/XhgmV7hMTJ01FuTeERgm5c/Portfolio?t=1oAiT7gGDkEL5SAQ-7
