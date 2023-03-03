@@ -78,7 +78,7 @@ body::-webkit-scrollbar {
     margin-left: 9%;
     width: 55%;
     padding-top: 30vh;
-    padding-bottom: 20vh;
+    padding-bottom: 22vh;
 }
 
 .presentation h1{
@@ -108,6 +108,7 @@ body::-webkit-scrollbar {
     position: absolute;
     opacity: 80%;
     width: 200px;
+    border-radius: 2px;
     display: none;
     pointer-events: none;
     z-index: 10;
@@ -117,8 +118,6 @@ body::-webkit-scrollbar {
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-left: 15vw;
-    margin-right: 15vw;
     margin-bottom: 1vh;
 }
 
@@ -383,10 +382,6 @@ body::-webkit-scrollbar {
 }
 /* Fin de la Page 4*/
 
-
-
-
-
 /* Commun des pages Detail */
 .swipe{
     padding-top: 43vh;
@@ -411,7 +406,6 @@ body::-webkit-scrollbar {
     color: rgba(247, 247, 247, 0.45);
 
 }
-
 
 .explication{
     width: 100vw;
@@ -489,7 +483,6 @@ body::-webkit-scrollbar {
     text-align: center;
 }
 
-
 /* Debut page Moontain (detail) */
 .moontain{
     width: 100vw;
@@ -514,8 +507,8 @@ body::-webkit-scrollbar {
 }
 
 
-/* Format Telephone */
-@media screen and (max-width: 900px){
+/* Format Tablette */
+@media screen and (max-width: 1000px){
 
     /* Navbar */ 
     .navbar p{
@@ -539,7 +532,7 @@ body::-webkit-scrollbar {
 
     /* Page 1 */
     .presentation .bienvenue{
-        padding-top: 26vh;
+        padding-top: 32vh;
         width: 80%;
     }
 
@@ -552,11 +545,15 @@ body::-webkit-scrollbar {
         font-size: 0.7em;
         letter-spacing: 0.25em;
     }
-    .presentation img{
-        width: 50px;
+
+    .presentation .basDePage{
+        margin-bottom: 1vh;
+    }
+
+    .presentation p{
+        font-size: 0.8em;
     }
     /* Fin de la Page 1 */
-
 
     /* Debut page 2 */
     .skills{
@@ -572,12 +569,13 @@ body::-webkit-scrollbar {
     .partieTexte{ 
         margin-left: 10%;
         margin-right: 10%;
+        margin-bottom: 2.5%;
+        margin-top: 2.5%;
     }
     
     .skills .titre{
         max-width: 50vw;
     }
-    
     
     .skills h2{
         font-size: 0.7em;
@@ -585,9 +583,9 @@ body::-webkit-scrollbar {
     }
     
     .skills p{
-        font-size: 3vw;
+        font-size: 0.8em;
         line-height: auto;
-        text-align: justify;
+        text-align: center;
     }
 
 
@@ -602,14 +600,15 @@ body::-webkit-scrollbar {
         height: 1px;
         background-color: #F7F7F7;
         margin-bottom: 6vh;
-        margin-left: 5.4vh;
+        margin-left: 7vh;
     }
     
     .espacementVerticalFin{
         width: 80%;
         height: 1px;
         background-color: #F7F7F7;
-        margin-right: 5.4vh;
+        margin-right: 7vh;
+        margin-top: -1.5vh;
     }
 
     .container {
@@ -649,7 +648,6 @@ body::-webkit-scrollbar {
         }
     }
     /* Fin de la Page 2 */
-
 
     /* Debut page 3 */
     .projets h2{
@@ -715,19 +713,18 @@ body::-webkit-scrollbar {
     
     .swipe h1{
         font-weight: 600;
-        font-size: 3em;
+        font-size: 2.5em;
     }
     
     .swipe h2{
         margin-top: 4vh;
         font-weight: 300;
-        font-size: 0.8em;
+        font-size: 0.6em;
     }
     
     .texteExplorer{
-        margin-top: 35vh;
+        margin-top: 31vh;
         color: rgba(247, 247, 247, 0.45);
-    
     }
     
     .explication h2{
@@ -743,5 +740,81 @@ body::-webkit-scrollbar {
         font-size: 0.8em;
         color: rgba(247, 247, 247, 0.45);
     }
+
+    .images .boutonGithub{
+        letter-spacing: 0.30em;
+        font-size: 1em;
+    }
     /* Fin page Commun */
+}
+
+@media screen and (max-width: 470px){
+
+    /* Navbar */ 
+    .navbar p{
+        font-size: 0.7em;
+    }
+    
+    .navbar a{
+        font-size: 0.7em;
+    }
+    /* Fin de la navbar */
+
+    /* Page 1 */
+    .presentation .bienvenue{
+        padding-top: 28vh;
+        padding-bottom: 19vh;
+        width: 80%;
+    }
+
+    .presentation h1 {
+        width: 80vw;
+        font-size: 9vw;
+    }
+
+    .presentation h2{
+        font-size: 2.8vw;
+        letter-spacing: 0.25em;
+    }
+
+    .presentation .basDePage{
+        margin-bottom: 1vh;
+    }
+
+    .presentation p{
+        font-size: 0.8em;
+    }
+    
+    .presentation .fleche{
+        width: 30px;
+    }
+    /* Fin de la Page 1 */
+
+    /* Debut page 2 */
+    .zoneTexte{
+        padding-top: 10vh;
+    }
+
+    .skills p{
+        font-size: 0.7em;
+        text-align: justify;
+    }
+
+    .espacementVerticalDebut{
+        margin-left: 7vh;
+    }
+    
+    .espacementVerticalFin{
+        margin-right: 7vh;
+        margin-top: -1.5vh;
+    }
+    /* Fin de la Page 2 */
+
+    /* Debut de la page Commun*/
+
+    .images figure img{
+        margin-bottom: 10vh;
+        width: 90%;
+    }
+    /* Fin de la Page Commun */
 }
